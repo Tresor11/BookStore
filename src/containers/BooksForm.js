@@ -1,8 +1,8 @@
 import React from 'react';
 
 export default function BooksForm() {
-  const categories = ["Action", "Biography", "History", "Horror", "Kids", "Learning", "Sci-Fi"];
-  return(
+  const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
+  return (
     <div>
       <form>
         <input type="text" value="Book Title" />
@@ -18,5 +18,5 @@ export default function BooksForm() {
         <button type="submit">Submit</button>
       </form>
     </div>
-  )
+  );
 }
