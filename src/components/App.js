@@ -4,8 +4,8 @@ import BooksForm from '../containers/BooksForm';
 
 function App({store}) {
   return (
-    <div> 
-      <BooksList books={store}/>
+    <div className="container"> 
+      <BooksList books={store.getState()}/>
       <BooksForm />
     </div>
   )
