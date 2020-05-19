@@ -10,10 +10,7 @@ export default function BooksList({books}) {
             <th>Title</th>
             <th>Category</th>
           </tr>
-          {
-            books.map(book =>  <Book />)
-          }
-
+         <Book book={books[0]}/>
         </table>
       </div>
     )

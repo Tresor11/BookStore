@@ -3,24 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App.js';
 import * as serviceWorker from './serviceWorker';
+import { Provider } from 'react-redux';
+import store from './reducers/index';
 
-const initialBooks = [
-  {id: Math.random(),  title: "Rich Dad, Poor Dad", category: "Learning"},
-  {id: Math.random(), title: "Things Fall Apart", category: "Horror"},
-  {id: Math.random(), title: "Cinderilla and the seven Dwarfs", category: "Kids"}
-]
-
-// class Bookstore extends React.Component(){
-//   constructor(props){
-//     super(props);
-//     this.state = initialBooks
-//   }
-  
-// }
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App store={store} />
+    </Provider>
+   
   </React.StrictMode>,
   document.getElementById('root')
 );
