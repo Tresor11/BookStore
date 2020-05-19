@@ -1,4 +1,6 @@
-import React from "react";
+/* eslint-disable react/forbid-prop-types */
+import React from 'react';
+import PropTypes from 'prop-types';
 
 export default function Book({ book }) {
   return (
@@ -9,3 +11,7 @@ export default function Book({ book }) {
     </tr>
   );
 }
+
+Book.propTypes = {
+  book: PropTypes.object.isRequired,
+};
