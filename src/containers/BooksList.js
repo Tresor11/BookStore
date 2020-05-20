@@ -8,12 +8,16 @@ export default function BooksList({ books }) {
   return (
     <div>
       <table>
-        <tr>
-          <th>Book ID</th>
-          <th>Title</th>
-          <th>Category</th>
-        </tr>
-        {books.map(book => <Book book={book} />)}
+        <thead>
+          <tr>
+            <th>Book ID</th>
+            <th>Title</th>
+            <th>Category</th>
+          </tr>
+        </thead>
+        <tbody>
+          {books.map(book => <Book key={Math.random() * 1000} book={book} />)}
+        </tbody>
       </table>
     </div>
   );
