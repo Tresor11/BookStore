@@ -15,4 +15,5 @@ export default function Book({ book, handleDelete }) {
 
 Book.propTypes = {
   book: PropTypes.object.isRequired,
+  handleDelete: PropTypes.func.isRequired,
 };

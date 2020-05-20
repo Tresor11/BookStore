@@ -1,5 +1,7 @@
+/* eslint-disable react/forbid-prop-types */
 /* eslint-disable react/destructuring-assignment */
 import React from 'react';
+import PropTypes from 'prop-types';
 import { CREATE_BOOK } from '../actions/index';
 
 class BooksForm extends React.Component {
@@ -47,5 +49,9 @@ class BooksForm extends React.Component {
     );
   }
 }
+
+BooksForm.propTypes = {
+  store: PropTypes.object.isRequired,
+};
 
 export default BooksForm;
