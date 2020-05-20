@@ -6,7 +6,7 @@ import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 import store from './reducers/index';
 
-
+console.log(store.getState());
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
