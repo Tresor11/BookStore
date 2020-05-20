@@ -9,7 +9,7 @@ export default function BooksForm() {
         <select>
           {categories.map(el => <option key={Math.random() * 100} value={el}>{el}</option>)}
         </select>
-        <button type="submit">Submit</button>
+        <button type="submit"> Submit </button>
       </form>
     </div>
   );
