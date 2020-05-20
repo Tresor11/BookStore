@@ -35,13 +35,7 @@ class BooksForm extends React.Component {
         <form>
           <input type="text" placeholder="Book title" name="title" value={this.state.title} onChange={this.handleChange} />
           <select name="category" value={this.state.category} onChange={this.handleChange}>
-            <option value={categories[0]}>{categories[0]}</option>
-            <option value={categories[1]}>{categories[1]}</option>
-            <option value={categories[2]}>{categories[2]}</option>
-            <option value={categories[3]}>{categories[3]}</option>
-            <option value={categories[4]}>{categories[4]}</option>
-            <option value={categories[5]}>{categories[5]}</option>
-            <option value={categories[7]}>{categories[6]}</option>
+            {categories.map(el => <option key={Math.random() * 100} value={el}>{el}</option>)}
           </select>
           <button type="submit" onClick={this.handleSubmit}>Submit</button>
         </form>

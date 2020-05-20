@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unused-prop-types */
 /* eslint-disable react/forbid-prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -5,7 +6,8 @@ import { connect } from 'react-redux';
 import BooksList from '../containers/BooksList';
 import BooksForm from '../containers/BooksForm';
 
-function App({ store }) {
+function App(props) {
+  const store = props;
   return (
     <div className="container">
       <BooksList store={store} />
@@ -15,7 +17,9 @@ function App({ store }) {
 }
 
 App.propTypes = {
-  store: PropTypes.object.isRequired,
+  props: PropTypes.object.isRequired,
 };
 
-export default App;
+const mapStateToProps = state => state;
+
+export default connect(mapStateToProps)(App);
