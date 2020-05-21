@@ -35,6 +35,7 @@ class BooksForm extends React.Component {
         <form>
           <input type="text" placeholder="Book title" name="title" value={this.state.title} onChange={this.handleChange} />
           <select name="category" value={this.state.category} onChange={this.handleChange}>
+            <option disable selected>Select category</option>
             {categories.map(el => <option key={Math.random() * 100} value={el}>{el}</option>)}
           </select>
           <button type="submit" onClick={this.handleSubmit}>Submit</button>

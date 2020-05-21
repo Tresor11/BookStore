@@ -8,19 +8,20 @@ import { REMOVE_BOOK, CHANGE_FILTER } from '../actions/index';
 import CategoryFilter from '../components/CategoryFilter';
 
 const BooksList = props => {
-  const { add_filter, remove, state } = props;
-  console.log(props);
+  const { addFilter, remove, state } = props;
   const removeBook = book => {
     remove(book);
   };
 
-  const handleFilterChange = (evt) => {
-    add_filter(evt.target.value)
-  }
+  const handleFilterChange = evt => {
+    addFilter(evt.target.value);
+  };
+
+  const filteredBooks = state.filter === 'ALL' ? state.books : state.books.filter(el => el.category === state.filter);
 
   return (
     <div>
-      <CategoryFilter onChange={handleFilterChange}/>
+      <CategoryFilter onChange={handleFilterChange} value={state.filter} />
       <table>
         <thead>
           <tr>
@@ -30,7 +31,7 @@ const BooksList = props => {
           </tr>
         </thead>
         <tbody>
-          {state.books.map(book => (
+          {filteredBooks.map(book => (
             <Book
               key={Math.random() * 1000}
               handleDelete={() => removeBook(book)}
@@ -46,11 +47,12 @@ const BooksList = props => {
 BooksList.propTypes = {
   remove: PropTypes.func.isRequired,
   state: PropTypes.array.isRequired,
+  addFilter: PropTypes.func.isRequired,
 };
 
 const mapDispatchToProps = {
   remove: REMOVE_BOOK,
-  add_filter: CHANGE_FILTER,
+  addFilter: CHANGE_FILTER,
 };
 
 const mapStateToProps = state => ({ state });
