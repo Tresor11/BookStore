@@ -7,7 +7,6 @@ import Book from '../components/Book';
 
 function BooksList(props) {
   const store = props.state;
-  const books = Object.values(store);
   return (
     <div>
       <table>
@@ -19,7 +18,7 @@ function BooksList(props) {
           </tr>
         </thead>
         <tbody>
-          {books.map(book => <Book key={book.id} book={book} />)}
+          {store.map(book => <Book key={book.id} book={book} />)}
         </tbody>
       </table>
     </div>
