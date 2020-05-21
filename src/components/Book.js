@@ -4,11 +4,16 @@ import PropTypes from 'prop-types';
 
 export default function Book({ book, handleDelete }) {
   return (
-    <ul>
-      <li>{book.category}</li>
-      <li>{book.title}</li>
-      <li><button type="button" onClick={() => handleDelete(book)}>Remove</button></li>
-    </ul>
+    <div className="book-details">
+      <div id="title-cat">
+        <p>Category : {book.category}</p>
+        <h3>{book.title}</h3>
+        <p>Book-ID : {book.id}</p>
+      </div>
+      <div id="btn-remove">
+        <button className="w-100 h-30 blue" type="button" onClick={() => handleDelete(book)}>Remove</button>
+      </div>
+    </div>
   );
 }
 

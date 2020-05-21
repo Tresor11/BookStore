@@ -4,7 +4,8 @@ import BooksForm from '../containers/BooksForm';
 
 function App() {
   return (
-    <div className="container">
+    <div className="main">
+      <div className="container">
       <header className='header'>
         <h1 className="title">BookStore CMS</h1>
         <h5>BOOKS</h5>
@@ -13,6 +14,8 @@ function App() {
       
       <BooksList />
       <BooksForm />
+      </div>
+     
     </div>
   );
 }
