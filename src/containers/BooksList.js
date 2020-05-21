@@ -1,5 +1,3 @@
-/* eslint-disable react/forbid-prop-types */
-/* eslint-disable max-len */
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -8,7 +6,9 @@ import { REMOVE_BOOK, CHANGE_FILTER } from '../actions/index';
 import CategoryFilter from '../components/CategoryFilter';
 
 const BooksList = props => {
-  const { addFilter, remove, state } = props;
+  const {
+    addFilter, remove, books, filter,
+  } = props;
   const removeBook = book => {
     remove(book);
   };
@@ -17,10 +17,10 @@ const BooksList = props => {
     addFilter(evt.target.value);
   };
 
-  const filteredBooks = state.filter === 'ALL' ? state.books : state.books.filter(el => el.category === state.filter);
+  const filteredBooks = filter === 'ALL' ? books : books.filter(el => el.category === filter);
   return (
     <div>
-      <CategoryFilter onChange={handleFilterChange} value={state.filter} />
+      <CategoryFilter onChange={handleFilterChange} value={filter} />
       <table>
         <thead>
           <tr>
@@ -45,8 +45,13 @@ const BooksList = props => {
 
 BooksList.propTypes = {
   remove: PropTypes.func.isRequired,
-  state: PropTypes.object.isRequired,
   addFilter: PropTypes.func.isRequired,
+  filter: PropTypes.string.isRequired,
+  books: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number,
+    title: PropTypes.string,
+    category: PropTypes.string,
+  })).isRequired,
 };
 
 const mapDispatchToProps = {
@@ -54,6 +59,6 @@ const mapDispatchToProps = {
   addFilter: CHANGE_FILTER,
 };
 
-const mapStateToProps = state => ({ state });
+const mapStateToProps = state => ({ books: state.books, filter: state.filter });
 
 export default connect(mapStateToProps, mapDispatchToProps)(BooksList);

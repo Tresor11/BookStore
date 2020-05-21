@@ -1,4 +1,3 @@
-// import { createStore } from 'redux';
 const initialBooks = [
   { id: 1, title: 'Rich Dad, Poor Dad', category: 'Learning' },
   { id: 2, title: 'Things Fall Apart', category: 'Horror' },

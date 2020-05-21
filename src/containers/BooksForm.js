@@ -1,4 +1,3 @@
-/* eslint-disable react/forbid-prop-types */
 /* eslint-disable react/destructuring-assignment */
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -23,9 +22,9 @@ class BooksForm extends React.Component {
   }
 
   handleSubmit(ev) {
-    ev.preventDefault();
     this.props.create(this.state);
     this.setState({ title: '', category: '' });
+    ev.preventDefault();
   }
 
   render() {
@@ -33,9 +32,9 @@ class BooksForm extends React.Component {
     return (
       <div>
         <form>
-          <input type="text" placeholder="Book title" name="title" value={this.state.title} onChange={this.handleChange} />
+          <input type="text" required placeholder="Book title" name="title" value={this.state.title} onChange={this.handleChange} />
           <select name="category" value={this.state.category} onChange={this.handleChange}>
-            <option value="">Select category</option>
+            <option value="">select category</option>
             {categories.map(el => <option key={Math.random() * 100} value={el}>{el}</option>)}
           </select>
           <button type="submit" onClick={this.handleSubmit}>Submit</button>

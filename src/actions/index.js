@@ -1,5 +1,4 @@
 /* eslint-disable no-plusplus */
-// import React from 'react';
 let id = 4;
 
 const CREATE_BOOK = book => ({
