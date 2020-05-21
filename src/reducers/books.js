@@ -1,8 +1,8 @@
 // import { createStore } from 'redux';
 const initialBooks = [
-  { id: Math.floor(Math.random() * 100), title: 'Rich Dad, Poor Dad', category: 'Learning' },
-  { id: Math.floor(Math.random() * 100), title: 'Things Fall Apart', category: 'Horror' },
-  { id: Math.floor(Math.random() * 100), title: 'Cinderilla and the seven Dwarfs', category: 'Kids' },
+  { id: 1, title: 'Rich Dad, Poor Dad', category: 'Learning' },
+  { id: 2, title: 'Things Fall Apart', category: 'Horror' },
+  { id: 3, title: 'Cinderilla and the seven Dwarfs', category: 'Kids' },
 ];
 
 const bookReducer = (state = initialBooks, action) => {
