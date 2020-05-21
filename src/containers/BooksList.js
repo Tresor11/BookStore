@@ -45,7 +45,7 @@ const BooksList = props => {
 
 BooksList.propTypes = {
   remove: PropTypes.func.isRequired,
-  state: PropTypes.array.isRequired,
+  state: PropTypes.object.isRequired,
   addFilter: PropTypes.func.isRequired,
 };
 
