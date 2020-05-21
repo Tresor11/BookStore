@@ -1,10 +1,13 @@
 /* eslint-disable react/jsx-key */
 /* eslint-disable react/forbid-prop-types */
 import React from 'react';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Book from '../components/Book';
 
-export default function BooksList({ books }) {
+function BooksList(props) {
+  const store = props.state;
+  const books = Object.values(store);
   return (
     <div>
       <table>
@@ -16,7 +19,7 @@ export default function BooksList({ books }) {
           </tr>
         </thead>
         <tbody>
-          {books.map(book => <Book key={Math.random() * 1000} book={book} />)}
+          {books.map(book => <Book key={book.id} book={book} />)}
         </tbody>
       </table>
     </div>
@@ -24,5 +27,8 @@ export default function BooksList({ books }) {
 }
 
 BooksList.propTypes = {
-  books: PropTypes.array.isRequired,
+  state: PropTypes.array.isRequired,
 };
+
+const mapStateToProps = state => ({state});
+export default connect(mapStateToProps)(BooksList);
