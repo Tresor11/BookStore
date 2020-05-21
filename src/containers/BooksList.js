@@ -11,7 +11,7 @@ const removeBook = (book, state) => {
   state.dispatch(REMOVE_BOOK(book));
 };
 const BooksList = ({ store }) => {
-  const books = Object.values(store).filter(el => el.id >= 0);
+  const books = Object.values(store.books).filter(el => el.id >= 0);
   return (
     <div>
       <table>
