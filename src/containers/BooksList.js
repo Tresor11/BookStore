@@ -22,6 +22,7 @@ const BooksList = props => {
           </tr>
         </thead>
         <tbody>
+
           {state.map(book => (
             <Book
               key={Math.random() * 1000}
@@ -29,6 +30,7 @@ const BooksList = props => {
               book={book}
             />
           ))}
+
         </tbody>
       </table>
     </div>
