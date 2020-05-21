@@ -18,7 +18,6 @@ const BooksList = props => {
   };
 
   const filteredBooks = state.filter === 'ALL' ? state.books : state.books.filter(el => el.category === state.filter);
-
   return (
     <div>
       <CategoryFilter onChange={handleFilterChange} value={state.filter} />
