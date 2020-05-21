@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import Book from '../components/Book';
 
 function BooksList(props) {
-  const store = props.state;
+  const { state } = props;
   return (
     <div>
       <table>
@@ -18,7 +18,7 @@ function BooksList(props) {
           </tr>
         </thead>
         <tbody>
-          {store.map(book => <Book key={book.id} book={book} />)}
+          {state.map(book => <Book key={book.id} book={book} />)}
         </tbody>
       </table>
     </div>
@@ -29,5 +29,5 @@ BooksList.propTypes = {
   state: PropTypes.array.isRequired,
 };
 
-const mapStateToProps = state => ({state});
+const mapStateToProps = state => ({ state });
 export default connect(mapStateToProps)(BooksList);
