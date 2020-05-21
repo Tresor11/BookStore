@@ -8,7 +8,6 @@ import { REMOVE_BOOK } from '../actions/index';
 
 const BooksList = props => {
   const { remove, state } = props;
-  const books = Object.values(state).filter(el => el.id >= 0);
   const removeBook = book => {
     remove(book);
   };
@@ -23,7 +22,7 @@ const BooksList = props => {
           </tr>
         </thead>
         <tbody>
-          {books.map(book => (
+          {state.map(book => (
             <Book
               key={Math.random() * 1000}
               handleDelete={() => removeBook(book)}
