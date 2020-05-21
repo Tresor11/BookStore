@@ -22,7 +22,7 @@ const BooksList = props => {
           </tr>
         </thead>
         <tbody>
-          {state.map(book => (
+          {state.books.map(book => (
             <Book
               key={Math.random() * 1000}
               handleDelete={() => removeBook(book)}
