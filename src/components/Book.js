@@ -6,9 +6,14 @@ export default function Book({ book, handleDelete }) {
   return (
     <div className="book-details">
       <div id="title-cat">
-        <p>Category : {book.category}</p>
-        <h3>{book.title}</h3>
-        <p>Book-ID : {book.id}</p>
+        <p className="category">
+          {book.category}
+        </p>
+        <h3 className="book-title">{book.title}</h3>
+        <p className="book-id">
+          Book-ID :
+          {book.id}
+        </p>
       </div>
       <div id="btn-remove">
         <button className="w-100 h-30 blue" type="button" onClick={() => handleDelete(book)}>Remove</button>

@@ -1,27 +1,28 @@
-import React from "react";
-import { connect } from "react-redux";
-import PropTypes from "prop-types";
-import Book from "../components/Book";
-import { REMOVE_BOOK, CHANGE_FILTER } from "../actions/index";
-import CategoryFilter from "../components/CategoryFilter";
+import React from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import Book from '../components/Book';
+import { REMOVE_BOOK, CHANGE_FILTER } from '../actions/index';
+import CategoryFilter from '../components/CategoryFilter';
 
-const BooksList = (props) => {
-  const { addFilter, remove, books, filter } = props;
-  const removeBook = (book) => {
+const BooksList = props => {
+  const {
+    addFilter, remove, books, filter,
+  } = props;
+  const removeBook = book => {
     remove(book);
   };
 
-  const handleFilterChange = (evt) => {
+  const handleFilterChange = evt => {
     addFilter(evt.target.value);
   };
 
-  const filteredBooks =
-    filter === "ALL" ? books : books.filter((el) => el.category === filter);
+  const filteredBooks = filter === 'ALL' ? books : books.filter(el => el.category === filter);
   return (
     <div>
       <CategoryFilter onChange={handleFilterChange} value={filter} />
 
-      {filteredBooks.map((book) => (
+      {filteredBooks.map(book => (
         <Book
           key={Math.random() * 1000}
           handleDelete={() => removeBook(book)}
@@ -41,7 +42,7 @@ BooksList.propTypes = {
       id: PropTypes.number,
       title: PropTypes.string,
       category: PropTypes.string,
-    })
+    }),
   ).isRequired,
 };
 
@@ -50,7 +51,7 @@ const mapDispatchToProps = {
   addFilter: CHANGE_FILTER,
 };
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   books: state.books,
   filter: state.filter,
 });
