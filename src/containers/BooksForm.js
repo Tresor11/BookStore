@@ -2,6 +2,7 @@
 /* eslint-disable react/destructuring-assignment */
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import { CREATE_BOOK } from '../actions/index';
 
 class BooksForm extends React.Component {
@@ -23,7 +24,7 @@ class BooksForm extends React.Component {
 
   handleSubmit(ev) {
     ev.preventDefault();
-    this.props.store.dispatch(CREATE_BOOK(this.state));
+    this.props.create(this.state);
     this.setState({ title: '', category: '' });
   }
 
@@ -44,7 +45,11 @@ class BooksForm extends React.Component {
 }
 
 BooksForm.propTypes = {
-  store: PropTypes.object.isRequired,
+  create: PropTypes.func.isRequired,
 };
 
-export default BooksForm;
+const mapDispatchToProps = {
+  create: CREATE_BOOK,
+};
+
+export default connect(null, mapDispatchToProps)(BooksForm);
