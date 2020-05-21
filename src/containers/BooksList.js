@@ -1,12 +1,14 @@
-/* eslint-disable react/jsx-key */
-/* eslint-disable react/forbid-prop-types */
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Book from '../components/Book';
+import { REMOVE_BOOK } from '../actions/index';
 
-function BooksList(props) {
-  const { state } = props;
+const BooksList = props => {
+  const { remove, books } = props;
+  const removeBook = book => {
+    remove(book);
+  };
   return (
     <div>
       <table>
@@ -18,16 +20,34 @@ function BooksList(props) {
           </tr>
         </thead>
         <tbody>
-          {state.map(book => <Book key={book.id} book={book} />)}
+
+          {books.map(book => (
+            <Book
+              key={Math.random() * 1000}
+              handleDelete={() => removeBook(book)}
+              book={book}
+            />
+          ))}
+
         </tbody>
       </table>
     </div>
   );
-}
-
-BooksList.propTypes = {
-  state: PropTypes.array.isRequired,
 };
 
-const mapStateToProps = state => ({ state });
-export default connect(mapStateToProps)(BooksList);
+BooksList.propTypes = {
+  remove: PropTypes.func.isRequired,
+  books: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number,
+    title: PropTypes.string,
+    category: PropTypes.string,
+  })).isRequired,
+};
+
+const mapDispatchToProps = {
+  remove: REMOVE_BOOK,
+};
+
+const mapStateToProps = state => ({ books: state });
+
+export default connect(mapStateToProps, mapDispatchToProps)(BooksList);
