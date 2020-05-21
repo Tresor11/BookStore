@@ -1,6 +1,6 @@
 /* eslint-disable no-plusplus */
 // import React from 'react';
-let id = 0;
+let id = 4;
 
 const CREATE_BOOK = book => ({
   type: 'CREATE_BOOK',
