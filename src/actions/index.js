@@ -1,4 +1,3 @@
-/* eslint-disable no-plusplus */
 let id = 4;
 
 const CREATE_BOOK = book => ({
