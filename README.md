@@ -16,7 +16,7 @@ This is a simple application where the user can create a book and can filter the
 
 ## Live Demo
 
-[Live Demo Link](https://book-store-t.herokuapp.com/)
+[Live Demo Link](https://breact-bookstore-app.herokuapp.com/)
 
 ## Getting Started
 
@@ -55,9 +55,9 @@ to get the deployment build of the code run `npm run build`
 
 👤 **Selma ndi**
 
-- Github: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- Linkedin: [linkedin](https://linkedin.com/linkedinhandle)
+- Github: [@githubhandle](https://github.com/Datagirlcmr)
+- Twitter: [@twitterhandle](https://twitter.com/SelmaNdi)
+- Linkedin: [linkedin](https://www.linkedin.com/in/selma-ndi-datagirl-imba-8976ab32/)
 
 ## 🤝 Contributing
 
