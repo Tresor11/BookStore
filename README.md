@@ -18,7 +18,6 @@ This is a simple application where the user can create a book and can filter the
 
 [Live Demo Link](https://book-store-t.herokuapp.com/)
 
-
 ## Getting Started
 
 Here are the steps to follow in order to get this project on your local computer.
@@ -79,3 +78,4 @@ Give a ⭐️ if you like this project!
 ## 📝 License
 
 This project is [MIT](lic.url) licensed.
+
