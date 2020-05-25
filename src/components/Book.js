@@ -1,4 +1,3 @@
-/* eslint-disable react/forbid-prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -23,6 +22,10 @@ export default function Book({ book, handleDelete }) {
 }
 
 Book.propTypes = {
-  book: PropTypes.object.isRequired,
+  book: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
+  }).isRequired,
   handleDelete: PropTypes.func.isRequired,
 };
