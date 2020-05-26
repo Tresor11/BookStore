@@ -21,16 +21,19 @@ class BooksForm extends React.Component {
   }
 
   handleSubmit(ev) {
-    this.props.create(this.state);
-    this.setState({ title: '', category: '' });
     ev.preventDefault();
+    const { create } = this.props;
+    create(this.state);
+    this.setState({ title: '', category: '' });
   }
 
   render() {
+    const { title, category } = this.state;
     const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
     return (
       <div>
         <h4 className="form-control new-book-text">ADD NEW BOOK</h4>
+<<<<<<< HEAD
         <form className="form-control">
           <input type="text" className="w-50 h-40" required placeholder="Book title" name="title" value={this.state.title} onChange={this.handleChange} />
           <select name="category" className="w-25 h-40" required value={this.state.category} onChange={this.handleChange}>
@@ -38,6 +41,15 @@ class BooksForm extends React.Component {
             {categories.map(el => <option key={Math.random() * 100} value={el}>{el}</option>)}
           </select>
           <button type="submit" className="w-20 h-40 blue" onSubmit={this.handleSubmit}>Add Book</button>
+=======
+        <form className="form-control" onSubmit={this.handleSubmit}>
+          <input type="text" className="w-50 h-40" required placeholder="Book title" name="title" value={title} onChange={this.handleChange} />
+          <select name="category" className="w-25 h-40" value={category} onChange={this.handleChange}>
+            <option value="">Category</option>
+            {categories.map(el => <option key={Math.random() * 100} value={el}>{el}</option>)}
+          </select>
+          <button type="submit" className="w-20 h-40 blue">Add Book</button>
+>>>>>>> fbd972d204b121cf0026ba4521f5862e795e0230
         </form>
       </div>
     );
