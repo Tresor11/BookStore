@@ -21,24 +21,14 @@ const BooksList = props => {
   return (
     <div>
       <CategoryFilter onChange={handleFilterChange} value={filter} />
-      <table>
-        <thead>
-          <tr>
-            <th>Book ID</th>
-            <th>Title</th>
-            <th>Category</th>
-          </tr>
-        </thead>
-        <tbody>
-          {filteredBooks.map(book => (
-            <Book
-              key={Math.random() * 1000}
-              handleDelete={() => removeBook(book)}
-              book={book}
-            />
-          ))}
-        </tbody>
-      </table>
+
+      {filteredBooks.map(book => (
+        <Book
+          key={Math.random() * 1000}
+          handleDelete={() => removeBook(book)}
+          book={book}
+        />
+      ))}
     </div>
   );
 };
@@ -47,11 +37,13 @@ BooksList.propTypes = {
   remove: PropTypes.func.isRequired,
   addFilter: PropTypes.func.isRequired,
   filter: PropTypes.string.isRequired,
-  books: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number,
-    title: PropTypes.string,
-    category: PropTypes.string,
-  })).isRequired,
+  books: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+      title: PropTypes.string,
+      category: PropTypes.string,
+    }),
+  ).isRequired,
 };
 
 const mapDispatchToProps = {
@@ -59,6 +51,9 @@ const mapDispatchToProps = {
   addFilter: CHANGE_FILTER,
 };
 
-const mapStateToProps = state => ({ books: state.books, filter: state.filter });
+const mapStateToProps = state => ({
+  books: state.books,
+  filter: state.filter,
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(BooksList);

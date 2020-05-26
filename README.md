@@ -1,53 +1,59 @@
 # Project Name
 
-> One paragraph statement about the project.
+> This project is a book managment app build with React and Redux.
 
-![screenshot](./app_screenshot.png)
+![screenshot](./bookstore.png)
 
-Additional description about the project and its features.
+This is a simple application where the user can create a book and can filter the books they wants to see by category
 
 ## Built With
 
-- Major languages,
-- frameworks,
-- technologies used
+- javaScript
+- React
+- Redux
+- Node js
+- Heroku
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
-
+[Live Demo Link](https://book-store-t.herokuapp.com/)
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
+Here are the steps to follow in order to get this project on your local computer.
 
 ### Prerequisites
 
+`node v12.16.3 +`
+
+`npm v6.14.4 +`
+
 ### Setup
+
+clone this repo by typing `git clone`
 
 ### Install
 
+install the dependacies by typing `npm install`
+
 ### Usage
 
-### Run tests
+start the local server by running `npm start`
 
 ### Deployment
 
+this project is deployed on heroku
 
+to get the deployment build of the code run `npm run build`
 
 ## Authors
 
-👤 **Author1**
+👤 **Tresor bireke**
 
-- Github: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- Linkedin: [linkedin](https://linkedin.com/linkedinhandle)
+- Github: [@Tresor11](https://github.com/Tresor11)
+- Twitter: [@Tbireke](https://twitter.com/Tbireke)
 
-👤 **Author2**
+👤 **Selma ndi**
 
 - Github: [@githubhandle](https://github.com/githubhandle)
 - Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
@@ -72,3 +78,4 @@ Give a ⭐️ if you like this project!
 ## 📝 License
 
 This project is [MIT](lic.url) licensed.
+

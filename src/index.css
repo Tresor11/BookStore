@@ -1,20 +1,155 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body{
+  background-color: #f5f6fa;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-.container{
-  margin: auto;
-  background-color: aqua;
+.main{
   width: 80%;
-  text-align: center;
+  margin: 40px auto;
+  background-color: #f5f6fa;
+  -webkit-box-shadow: 6px 0px 48px 2px rgba(148,148,148,1);
+  -moz-box-shadow: 6px 0px 48px 2px rgba(148,148,148,1);
+  box-shadow: 6px 0px 48px 2px rgba(148,148,148,1);
+}
+
+.container {
+  margin: 40px auto;
+  width: 100%;
+  background-color: #fafafa;
+  border: 1px solid white;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+  color: rgb(173, 171, 171);
+  background-color: white;
+}
+
+.title {
+  height: 37px;
+  font-family: Montserrat;
+  font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #0290ff;
+}
+
+.category{
+  opacity: 0.5;
+  font-family: Montserrat,Georgia, 'Times New Roman', Times, serif;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.book-details {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  margin: 20px auto;
+  border: 1px solid #e8e8e8;
+  background-color: white;
+  -webkit-box-shadow: 0px 5px 9px 1px rgba(209,209,209,1);
+-moz-box-shadow: 0px 5px 9px 1px rgba(209,209,209,1);
+box-shadow: 0px 5px 9px 1px rgba(209,209,209,1);
+
+}
+
+#title-cat {
+  line-height: 10px;
+  width: 65%;
+}
+
+#btn-remove {
+  width: 20%;
+  display: flex;
+  align-items: center;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.h-30 {
+  height: 30%;
+}
+
+.blue {
+  background-color: #0290ff;
+}
+
+.form-control {
+  width: 90%;
+  margin: 20px auto;
+  color: rgb(173, 171, 171);
+  display: flex;
+  justify-content: space-between;
+  height: 40%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-25 {
+  width: 25%;
+}
+
+.w-20 {
+  width: 20%;
+}
+
+.h-40 {
+  height: 30px;
+}
+
+.book-id{
+  height: 19px;
+  font-family: RobotoSlab;
+  font-size: 16px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.book-title{
+  height: 29px;
+  font-family: RobotoSlab;
+  font-size: 22px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: #121212;
+}
+
+.new-book-text{
+  border-top: 2px solid rgb(206, 206, 206);
+  padding: 10px 0px;
+}
+
+.filter {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 25%;
+  margin: auto;
+}
+
+button {
+  border: none;
+  color: white;
+  font-weight: bolder;
 }
