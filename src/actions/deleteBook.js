@@ -15,7 +15,6 @@ function removeBook(id) {
         }
       })
       .catch(error => {
-        // dispatch(fetchProductsError(error));
         return error;
       });
   };
