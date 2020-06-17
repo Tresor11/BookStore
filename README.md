@@ -16,7 +16,7 @@ This is a simple application where the user can create a book and can filter the
 
 ## Live Demo
 
-[Live Demo Link](https://breact-bookstore-app.herokuapp.com/)
+[Live Demo Link](https://book-store-t.netlify.app/)
 
 ## Getting Started
 
