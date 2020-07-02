@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { CREATE_BOOK } from '../actions/index';
+import createBook from '../actions/createBook';
 
 class BooksForm extends React.Component {
   constructor(props) {
@@ -9,6 +10,7 @@ class BooksForm extends React.Component {
     this.state = {
       title: '',
       category: '',
+      author: 'tresor',
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -22,8 +24,7 @@ class BooksForm extends React.Component {
 
   handleSubmit(ev) {
     ev.preventDefault();
-    const { create } = this.props;
-    create(this.state);
+    this.props.createBook(this.state);
     this.setState({ title: '', category: '' });
   }
 
@@ -34,8 +35,8 @@ class BooksForm extends React.Component {
       <div>
         <h4 className="form-control new-book-text">ADD NEW BOOK</h4>
         <form className="form-control" onSubmit={this.handleSubmit}>
-          <input type="text" className="w-50 h-40" required placeholder="Book title" name="title" value={title} onChange={this.handleChange} />
-          <select name="category" required className="w-25 h-40" value={category} onChange={this.handleChange}>
+          <input type="text" className="w-50 h-40" placeholder="Book title" name="title" value={title} onChange={this.handleChange} />
+          <select name="category" className="w-25 h-40" value={category} onChange={this.handleChange}>
             <option value="">Category</option>
             {categories.map(el => <option key={Math.random() * 100} value={el}>{el}</option>)}
           </select>
@@ -52,6 +53,7 @@ BooksForm.propTypes = {
 
 const mapDispatchToProps = {
   create: CREATE_BOOK,
+  createBook,
 };
 
 export default connect(null, mapDispatchToProps)(BooksForm);
