@@ -1,15 +1,17 @@
 # Project Name
 
-> This project is a book managment app build with React and Redux.
+> This project is a book managment app build with React,Redux and Rails.
 
 ![screenshot](./bookstore.png)
 
-This is a simple application where the user can create a book and can filter the books they wants to see by category
+This project is a simple application where the user can create a book and can filter the books they want to see by category. The application fetches the data from a rails API that was built especially for this project
 
 ## Built With
 
 - javaScript
+- ruby
 - React
+- rails
 - Redux
 - Node js
 - Heroku
@@ -52,6 +54,7 @@ to get the deployment build of the code run `npm run build`
 
 - Github: [@Tresor11](https://github.com/Tresor11)
 - Twitter: [@Tbireke](https://twitter.com/Tbireke)
+- 
 
 👤 **Selma ndi**
 
