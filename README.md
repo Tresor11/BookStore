@@ -6,6 +6,10 @@
 
 This project is a simple application where the user can create a book and can filter the books they want to see by category. The application fetches the data from a rails API that was built especially for this project
 
+### Future features
+- make the app responsive for mobile devices
+- implement the user authentication
+
 ## Built With
 
 - javaScript
