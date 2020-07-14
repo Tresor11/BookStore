@@ -4,7 +4,7 @@
 
 ![screenshot](./bookstore.png)
 
-This project is a simple application where the user can create a book and can filter the books they want to see by category. The application fetches the data from a rails API that was built especially for this project
+This project is a simple application where the user can create a book and can filter the books they want to see by category. The application fetches the data from a rails API that was built especially for this project.
 
 ### Future features
 - make the app responsive for mobile devices
@@ -12,12 +12,12 @@ This project is a simple application where the user can create a book and can fi
 
 ## Built With
 
-- javaScript
-- ruby
+- JavaScript
+- Ruby
 - React
-- rails
+- Rails
 - Redux
-- Node js
+- NodeJs
 - Heroku
 
 ## Live Demo
@@ -36,7 +36,7 @@ Here are the steps to follow in order to get this project on your local computer
 
 ### Setup
 
-clone this repo by typing `git clone`
+clone this repo by typing `git clone https://github.com/Tresor11/BookStore.git`
 
 ### Install
 
@@ -48,7 +48,7 @@ start the local server by running `npm start`
 
 ### Deployment
 
-this project is deployed on heroku
+this project is deployed on netlify
 
 to get the deployment build of the code run `npm run build`
 
@@ -58,7 +58,7 @@ to get the deployment build of the code run `npm run build`
 
 - Github: [@Tresor11](https://github.com/Tresor11)
 - Twitter: [@Tbireke](https://twitter.com/Tbireke)
-- 
+- Linkedin: [linkedin](https://www.linkedin.com/in/tresor-bireke/)
 
 👤 **Selma ndi**
 
